@@ -15,7 +15,7 @@
   border-radius: 4px;
 }
 .heroes li:hover {
-  color: #2c3a41;
+  color: rgb(240, 110, 17);
   background-color: #e6e6e6;
   left: 0.1em;
 }

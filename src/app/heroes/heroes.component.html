@@ -4,9 +4,10 @@
   <input id="name" [(ngModel)]="selectedHero.name" placeholder="name">
 </div> -->
 
-<h2>My Heroes</h2>
+<!-- <h2>My Heroes</h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes" (click)="onClick(hero)">
+  <li *ngFor="let hero of heroes" (click)="onClick(hero) 
+    [class.selected]=" hero===selectedHero">
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
@@ -18,29 +19,17 @@
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
   </div>
-</div>
+</div> -->
 <!-- <div><span>name: </span>{{selectedHero.name}}</div> -->
 
 
 
 
 
-<!-- <h2>My Heroes</h2>
+<h2>My Heroes</h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes"
-    [class.selected]="hero === selectedHero"
-    (click)="onClick(hero)">
+  <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onClick(hero)">
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
-
-<div *ngIf="selectedHero">
-
-  <h2>{{selectedHero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedHero.id}}</div>
-  <div>
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
-  </div>
-
-</div> -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
